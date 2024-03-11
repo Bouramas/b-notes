@@ -21,4 +21,5 @@ https://github.com/spf13/cobra#generating-documentation-for-your-command
 // Golden Testing
 http://lucapette.me/writing-integration-tests-for-a-go-cli-application
 
-
+// How I write http services in go after 13 years
+https://grafana.com/blog/2024/02/09/how-i-write-http-services-in-go-after-13-years
