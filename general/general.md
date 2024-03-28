@@ -10,3 +10,7 @@ useful ideas in the following links:
 - https://dotfiles.github.io/inspiration/
 - https://shaky.sh/simple-dotfiles/
 - https://www.youtube.com/watch?v=y6XCebnB9gs
+
+### One Billion Row Challenge in Golang - From 95s to 1.96s
+
+- https://r2p.dev/b/2024-03-18-1brc-go/
