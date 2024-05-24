@@ -23,3 +23,12 @@ http://lucapette.me/writing-integration-tests-for-a-go-cli-application
 
 // How I write http services in go after 13 years
 https://grafana.com/blog/2024/02/09/how-i-write-http-services-in-go-after-13-years
+
+// Capital One blog
+https://medium.com/capital-one-tech/tagged/golang
+
+// Go is boring (on why go is a good choice)
+https://www.capitalone.com/tech/software-engineering/go-is-boring/
+
+// Generate Gopher Mascots
+https://gopherize.me/
