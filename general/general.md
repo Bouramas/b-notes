@@ -14,3 +14,6 @@ useful ideas in the following links:
 ### One Billion Row Challenge in Golang - From 95s to 1.96s
 
 - https://r2p.dev/b/2024-03-18-1brc-go/
+
+### Papers for Software Engineers
+https://github.com/facundoolano/software-papers
