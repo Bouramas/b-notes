@@ -4,7 +4,7 @@
 Notes written while learning to code in go
 
 ### Run a go scipt
-    
+
     go run test.go
 
 or create an executable
@@ -37,7 +37,7 @@ or create an executable
 ### Variable Declaration
 
     var variable_list optional_data_type;
-    
+
     var  i, j, k int;
     var  c, ch byte;
     var  f, salary float32;
@@ -78,7 +78,7 @@ Slice is a reference type - so it consists of:
 so when
 
     slice := []string{a,b,c}
-    
+
     func updateSlice(slice []string) {
         slice[0] = b
     }
@@ -118,20 +118,20 @@ This is what we call a reference Type. It is a reference to another data structu
 
       // tidy up the dependencies
       go mod tidy
-      
-      
+
+
       // where is this module used?
       go mod why -m github.com/emicklei/go-restful
-      
-      
+
+
       // vendor - have your deps locally - faster build times
       go mod vendor
-      
-      
+
+
       // upgrade dependency and all its dependencies to the latest version
       go get -u example.com/pkg
-      
-      
+
+
       // List all of the modules that are dependencies of your current module, along with the latest version available for each:
       go list -m -u all
 
@@ -145,3 +145,18 @@ More info [here](https://go.dev/doc/modules/managing-dependencies#enable_trackin
 ### %+v Printing
 fmt.Printf("%+v", aStruct) -> prints out the struct's fieldNames and its values
 
+
+### Underscore for readable numbers
+
+You can use the underscore to make your long numbers easier to read:
+
+      package main
+
+      import "fmt"
+
+      func main() {
+          number := 10000000
+          better := 10_000_000
+
+          fmt.Println(number == better)
+      }
