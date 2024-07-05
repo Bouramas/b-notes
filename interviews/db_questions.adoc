@@ -1,0 +1,114 @@
+== SQL/NoSQL related questions
+
+=== Primary Key, Foreign Key, and Unique Constraint
+
+* Primary Key - Uniquely identifies each record in a table.
+* Foreign Key - Establishes a relationship between two tables.
+* Unique Constraint - Ensures all values in a column are unique.
+
+=== How would you optimise a slow query? What are some common techniques?
+
+==== Indexing:
+* Create indexes on columns used in WHERE, JOIN, and ORDER BY clauses.
+* Fix read performance on your database but might slow down write performance.
+
+==== Connection Pooling:
+* Maintain a number of connections and reuse them.
+
+==== Query Refinement:
+* Avoid `SELECT *`, specify only needed columns.
+* Use `EXPLAIN` to understand query execution plans.
+* Rewrite complex queries to reduce joins and subqueries.
+
+==== Database Schema Design:
+* Normalize to reduce redundant data.
+* Denormalize for read-heavy workloads if necessary.
+
+==== Efficient Joins and Conditions:
+* Ensure joins use indexed columns.
+* Use appropriate join types (INNER JOIN vs LEFT JOIN).
+
+==== Application level caching:
+* Implement query caching for frequently accessed data.
+
+Is the read performance slow or the write performance?
+* Materialised views will improve your read performance but adds extra load on the database server that may impact write performance.
+
+=== ACID Properties in a DB transaction
+
+* Atomicity: Ensures that all operations within a transaction are completed; if not, the transaction is aborted.
+* Consistency: Ensures the database remains in a consistent state before and after the transaction.
+* Isolation: Ensures that concurrent transactions do not interfere with each other.
+* Durability: Ensures that once a transaction is committed, it remains so, even in the event of a system failure.
+
+=== What are stored procedures and triggers? Give examples of when you might use them.
+
+==== Stored Procedures:
+Precompiled collections of SQL statements stored in the database.
+* Example: Automating complex operations like monthly payroll processing.
+
+==== Triggers:
+SQL code executed automatically in response to certain events on a table.
+* Example: Automatically updating inventory counts when an order is placed.
+
+=== Designing a Database Schema for an E-commerce Application
+
+==== Users Table:
+* user_id (PK), name, email (Unique), password, address.
+
+==== Products Table:
+* product_id (PK), name, description, price, stock.
+
+==== Orders Table:
+* order_id (PK), user_id (FK), order_date, status.
+
+==== OrderItems Table:
+* order_item_id (PK), order_id (FK), product_id (FK), quantity, price.
+
+=== Main Differences Between SQL and NoSQL Databases:
+
+==== SQL Databases:
+* Structured schema and tables.
+* Use SQL for defining and manipulating data.
+* Suitable for complex queries and transactions.
+* Examples: MySQL, PostgreSQL, Oracle.
+
+==== NoSQL Databases:
+* Flexible schema (schemaless).
+* Store data in various formats: document, key-value, wide-column, graph.
+* Designed for horizontal scalability.
+* Examples: Redis, MongoDB, Cassandra.
+
+=== When to Choose a NoSQL Database Over a SQL Database:
+
+* Flexibility: When you need to store and manage unstructured or semi-structured data.
+* Scalability: When you need to handle large-scale data across many distributed servers.
+* Performance: When low-latency data access is critical, such as in real-time applications.
+* Complex Relationships: When you require specialised data models, like graph databases for connected data.
+* Rapid Development: When frequent changes to the data model are expected.
+
+=== Types of NoSQL Databases:
+
+==== Document-Based:
+* Description: Stores data in JSON-like documents, each document is a self-contained unit of data.
+* Use Cases: Content management systems, user profiles, e-commerce data.
+* Examples: MongoDB, CouchDB.
+
+==== Key-Value Stores:
+* Description: Stores data as key-value pairs, where a key is a unique identifier.
+* Use Cases: Caching, session management, user preferences.
+* Examples: Redis, DynamoDB, Riak.
+
+==== Columnar/Column-Family Stores:
+* Description: Stores data in columns rather than rows; columns are grouped into column families.
+* Use Cases: Analytical applications, real-time data processing, event logging.
+* Examples: Cassandra, HBase.
+
+==== Graph Databases:
+* Description: Stores data as nodes, edges, and properties to represent and traverse relationships.
+* Use Cases: Social networks, recommendation engines, fraud detection.
+* Examples: Neo4j, Amazon Neptune, ArangoDB.
+
+=== Is it optimal to set multiple indices to columns?
+
+Setting multiple indexes can be beneficial for improving query performance, but it's crucial to strike a balance between performance gains and overhead.
