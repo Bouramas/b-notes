@@ -1,0 +1,79 @@
+== GoLang Language Questions
+
+=== Does Go support inheritance?
+
+Go does not support traditional inheritance like class-based object-oriented languages. Instead, it supports composition and interfaces to achieve similar goals. Composition involves embedding types within a struct to reuse behavior, while interfaces provide polymorphism.
+
+=== What is the difference between switch and select in Go?
+
+* **switch**:
+  * Used for conditional control flow based on the value of a variable.
+  * Supports multiple expressions and cases with fallthrough behavior.
+
+* **select**:
+  * Used for concurrent control flow to choose between multiple communication operations.
+  * Used with channels and blocks until one of its cases can proceed.
+
+=== What is the difference between methods and functions in Go?
+
+* **Functions**:
+  * Standalone blocks of code that can be called with arguments.
+  * Defined using the `func` keyword outside of any struct.
+
+* **Methods**:
+  * Functions associated with a specific type (struct).
+  * Defined using the `func` keyword followed by the receiver type, like `(t Type)`.
+
+=== What is the internal package in Go?
+
+The internal package mechanism in Go is designed to restrict access to certain parts of a codebase, making them accessible only within the module or parent directory in which they reside. This enforces a level of encapsulation by preventing external packages from importing and using internal code, thereby helping developers to better manage dependencies and the exposure of implementation details.
+
+=== Testing Package in Go
+
+* Package `testing` provides support for automated testing of Go packages.
+* `go test` command automates execution of any function of the form `func TestXxx(*testing.T)`.
+* Filename ending in `_test.go`. The file will be excluded from regular package builds but will be included when the `go test` command is run.
+* The test file can be in the same package as the one being tested, or in a corresponding package with the suffix `_test`.
+
+=== Go Benchmark Tests
+
+* **Benchmarks**: Functions of the form `func BenchmarkXxx(*testing.B)` are considered benchmarks and are executed by the `go test` command when its `-bench` flag is provided.
+* Benchmarks are run sequentially.
+
+=== Go Fuzzing Tests
+
+* **Fuzzing**: `go test` and the testing package support fuzzing, a testing technique where a function is called with randomly generated inputs to find bugs not anticipated by unit tests.
+* Functions of the form `func FuzzXxx(*testing.F)` are considered fuzz tests.
+
+=== Mocking Techniques in Go
+
+* Manually creating mock objects.
+* Implementing interfaces.
+* Using function callbacks.
+* Using the GoMock framework for mock generation.
+
+=== What is a goroutine?
+
+In Go, each concurrently executing activity is called a goroutine.
+
+=== Differences Between Buffered and Unbuffered Channel
+
+Both channels serve as mechanisms for goroutines to communicate and synchronize.
+
+* **Buffered Channel**:
+  * Allows sending multiple values into the channel without a corresponding receiver.
+  * Capacity is defined during channel creation (`make(chan T, capacity)`).
+
+* **Unbuffered Channel**:
+  * Requires a sender and receiver to be ready simultaneously for communication.
+  * No capacity is specified (`make(chan T)`), making it synchronous.
+
+=== Channel Directions in Go
+
+Channels can be declared with send-only (`chan<- T`), receive-only (`<-chan T`), or bidirectional (`chan T`) directions.
+
+=== What is the use of panic in Go?
+
+`panic` is used to terminate a function execution immediately.
+* Typically used for unrecoverable errors or exceptional situations.
+* It triggers the deferred functions and may be recovered using `recover()` in deferred functions.
