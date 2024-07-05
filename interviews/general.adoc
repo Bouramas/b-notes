@@ -1,0 +1,113 @@
+== General Development Questions
+
+=== What are the different types of testing commonly used in software development?
+
+* **Unit Testing**:
+  Tests individual units or components of the software to validate each unit's functionality in isolation.
+* **Integration Testing**:
+  Verifies interactions between integrated components to ensure they work together as expected.
+* **System Testing**:
+  Evaluates the entire system's behaviour to ensure it meets specified requirements and functions correctly.
+* **Acceptance Testing**:
+  Validates that the software meets business requirements and is ready for deployment.
+* **Performance Testing**:
+  Assesses how the system performs under various conditions, such as load, stress, and scalability.
+* **Security Testing**:
+  Checks the software for vulnerabilities and ensures it protects data and resources from unauthorised access.
+* **Regression Testing**:
+  Re-runs previously executed tests to verify that recent changes have not adversely affected existing functionality.
+* **Smoke Testing**:
+  Conducts basic tests on the critical functionalities of the software to ensure stability before proceeding with further testing.
+* **Usability Testing**:
+  Evaluates how user-friendly and intuitive the software is for end-users.
+
+=== Design Patterns
+
+Can you explain some commonly used design patterns in software development?
+
+Patterns help solve recurring design problems in software development and promote code reusability, flexibility, and maintainability.
+
+* **Creational Patterns**:
+  Provide mechanisms for creating objects in a manner suitable for the situation.
+  * *Factory Method*: Defines an interface for creating objects but allows subclasses to decide which class to instantiate.
+  * *Singleton*: Ensures a class has only one instance and provides a global point of access to it.
+* **Structural Patterns**:
+  Focus on how objects are composed to form larger structures.
+  * *Adapter*: Converts the interface of a class into another interface clients expect.
+  * *Decorator*: Dynamically adds responsibilities to objects without subclassing.
+* **Behavioural Patterns**:
+  Deal with the interaction and communication between objects.
+  * *Observer*: Defines a dependency between objects so that when one object changes state, all its dependents are notified and updated automatically.
+  * *Strategy*: Defines a family of algorithms, encapsulates each one, and makes them interchangeable.
+
+=== SOLID Principles
+
+* **Single Responsibility Principle (SRP)**
+* **Open/Closed Principle**
+* **Liskov’s Substitution Principle (LSP)**
+* **Interface Segregation Principle (ISP)**
+* **Dependency Inversion Principle (DIP)**
+
+=== What are the 12 Factor App principles and how do they influence modern software development?
+
+The twelve-factor app is a methodology for building software-as-a-service apps that:
+
+* Use declarative formats for setup automation, to minimize time and cost for new developers joining the project.
+* Have a clean contract with the underlying operating system, offering maximum portability between execution environments.
+* Are suitable for deployment on modern cloud platforms, obviating the need for servers and systems administration.
+* Minimize divergence between development and production, enabling continuous deployment for maximum agility.
+* And can scale up without significant changes to tooling, architecture, or development practices.
+
+I. **Codebase**: One codebase tracked in revision control, many deploys.
+II. **Dependencies**: Explicitly declare and isolate dependencies.
+III. **Config**: Store config in the environment.
+IV. **Backing services**: Treat backing services as attached resources.
+V. **Build, release, run**: Strictly separate build and run stages.
+VI. **Processes**: Execute the app as one or more stateless processes.
+VII. **Port binding**: Export services via port binding.
+VIII. **Concurrency**: Scale out via the process model.
+IX. **Disposability**: Maximize robustness with fast startup and graceful shutdown.
+X. **Dev/prod parity**: Keep development, staging, and production as similar as possible.
+XI. **Logs**: Treat logs as event streams.
+XII. **Admin processes**: Run admin/management tasks as one-off processes.
+
+=== What are the principles of clean code? What is clean code for you?
+
+* **Readability**: Code should be easy to understand and follow, like well-written prose.
+* **Simplicity**: Keep code simple and concise; complexity should be minimized.
+* **Consistency**: Follow consistent coding conventions and patterns throughout the codebase.
+* **Modularity**: Encapsulate functionality into small, focused units (functions, classes) with clear responsibilities.
+* **Naming**: Use descriptive and meaningful names for variables, functions, classes, etc.
+* **Comments**: Write clear comments that explain why something is done, not what is done (code should be self-explanatory).
+* **Testing**: Ensure thorough testing to verify correctness and maintainability.
+* **Refactoring**: Continuously improve the design of the codebase without changing its external behavior.
+
+=== What is the MVC (Model-View-Controller) design pattern? When would you use it?
+
+**Definition**: Separates an application into three interconnected components: Model (data), View (user interface), and Controller (handles user input).
+
+**Purpose**: Enhances code organisation, modularity, and maintainability in applications with separate concerns.
+
+**Use Cases**: Ideal for web applications where separation of concerns is crucial, allowing different teams to work on different parts independently.
+
+=== Describe the difference between microservices and monolithic architectures.
+
+==== Microservices:
+**Definition**: Architectural style where an application is composed of small, independent services that communicate over a network.
+
+**Characteristics**: Each service is self-contained, can be developed and deployed independently, often using different technologies.
+
+**Advantages**: Scalability, flexibility, resilience to failures, and easier adoption of new technologies.
+
+==== Monolithic Architectures:
+**Definition**: Traditional architectural style where the entire application is built as a single, indivisible unit.
+
+**Characteristics**: All components tightly coupled, sharing the same codebase and usually deployed together.
+
+**Advantages**: Simplicity in development and deployment, easier to maintain in smaller applications.
+
+=== Describe your experience with Agile software development. What Agile methodologies have you used?
+
+=== How do you prioritise tasks and manage deadlines in your projects?
+
+=== What steps do you take to ensure code quality and maintainability in long-term projects?

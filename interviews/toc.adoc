@@ -1,0 +1,12 @@
+=== Interview questions
+
+Below is a series of interview questions that can be used in order
+to start a conversation and get a first impression of a candidate. Questions
+are split into sections depending on the subject. Sample answers are provided
+for almost all of the questions.
+
+=== Sections
+
+* link:rest_api.adoc[REST APIs]
+* link:db_questions.adoc[Databases]
+* link:general.adoc[General Development]
