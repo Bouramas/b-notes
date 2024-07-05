@@ -1,0 +1,91 @@
+== REST API questions
+
+=== Endpoints and HTTP Methods:
+
+Describe the RESTful endpoints and HTTP methods you would use to manage a blog system with posts, comments, and authors. How would you handle CRUD operations for each resource?
+
+==== Posts:
+
+[source,http]
+GET /posts
+GET /posts/{id}
+POST /posts
+PUT /posts/{id}
+DELETE /posts/{id}
+
+==== Comments:
+
+[source,http]
+GET /posts/{postId}/comments
+POST /posts/{postId}/comments
+DELETE /comments/{id}
+
+==== Authors:
+
+[source,http]
+GET /authors
+GET /authors/{id}
+POST /authors
+PUT /authors/{id}
+DELETE /authors/{id}
+
+=== Authentication and Authorization:
+
+How would you implement authentication and authorization in a REST API? Can you describe the differences between session-based authentication and token-based authentication, and explain which you would choose for a scalable application?
+
+==== Session-Based Authentication:
+
+- Uses cookies to store session identifiers.
+- Simple to implement, suitable for web applications.
+- Issues with scalability and CSRF vulnerabilities.
+
+==== Token-Based Authentication:
+
+- Uses tokens (e.g., JWT) in HTTP headers.
+- Stateless, more scalable, suitable for APIs.
+- More secure, but requires careful handling of token storage and expiration.
+
+==== Choice:
+For a scalable application, token-based authentication is preferred.
+
+=== Versioning:
+
+How do you handle versioning in a REST API? What are the pros and cons of different versioning strategies (e.g., URI versioning, header versioning)?
+
+==== URI Versioning:
+https://api.example.com/v1/resources
+
+- Easy to implement and understand.
+- Visible in the URL.
+- Requires changes in client URLs.
+
+==== Header Versioning:
+Accept: application/vnd.example.v1+json
+
+- Clean URLs.
+- Requires clients to set headers.
+- Less discoverable.
+
+==== Query Parameter Versioning:
+https://api.example.com/resources?version=1
+
+- Flexible, easy to test.
+- Adds complexity to URL parsing.
+
+==== Choice:
+Depends on use case; URI versioning is straightforward and commonly used.
+
+=== Error Handling and Status Codes:
+
+What strategies do you use for error handling in a REST API? Can you provide examples of appropriate HTTP status codes for different types of errors and describe how you would format error responses to be consistent and informative?
+
+==== Examples of HTTP Status Codes:
+
+- 400 Bad Request: Client sent an invalid request.
+- 401 Unauthorized: Authentication is required.
+- 403 Forbidden: Client is authenticated but does not have permission.
+- 404 Not Found: Resource does not exist.
+- 500 Internal Server Error: Server encountered an unexpected condition.
+
+==== Consistent Error Responses:
+Use a standard format (e.g., JSON) with fields like `errorCode`, `message`, `details`.
