@@ -8,6 +8,10 @@
 
 === How would you optimise a slow query? What are some common techniques?
 
+==== Analyze the execution plan
+* Use `EXPLAIN` in MySQL or PostgreSQL to understand the execution plan. This reveals how the query is processed, including table scans, index usage, and join methods.
+* In PostgreSQL, use EXPLAIN ANALYZE to execute the query and get detailed timing information.
+
 ==== Indexing:
 * Create indexes on columns used in WHERE, JOIN, and ORDER BY clauses.
 * Fix read performance on your database but might slow down write performance.
