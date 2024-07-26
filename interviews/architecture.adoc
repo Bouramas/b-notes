@@ -7,3 +7,64 @@ designing software applications as suites of independently deployable services. 
 definition of this architectural style, there are certain common characteristics around organization around
 business capability, automated deployment, intelligence in the endpoints, and decentralized control of
 languages and data.
+
+=== Cloud Computing Models
+
+Cloud Computing offers several different models and deployment strategies. Understanding each model and their
+differences as well as what deployment stategies are available, can help in taking the right decision.
+
+===== Infrastructure as a Service (IaaS)
+
+IaaS is a form of cloud computing that provides virtualized computing resources over the internet. It typically
+provides access to networking features, computers (virtual or on dedicated hardware), and data storage space.
+IaaS vendors can help you with the highest level of flexibility and management control over your IT resources
+and is most similar to existing IT resources that many IT departments and developers are familiar with today.
+
+- Related services: billing, monitoring, log access, security, backup, disaster recovery
+- Most suited for: temporary workloads, experimental, or might change
+- Risks: High costs if not monitored appropriately, lack of transparency in infrastructure
+
+===== Platform as a Service (PaaS)
+
+With PaaS, a provider offers more of the application stack than IaaS, adding OSes, middleware (such as databases)
+and other runtimes into the cloud environment. PaaS products include AWS Elastic Beanstalk and Google App Engine.
+
+PaaS, or Platform as a Service, is a cloud computing model that provides developers with a platform to develop, run,
+and manage applications without the complexity of building and maintaining the underlying infrastructure.
+
+Key Aspects of PaaS
+
+1. Abstraction - PaaS abstracts away much of the lower-level infrastructure management, allowing developers to focus on writing code and building applications.
+2. Development Tools - PaaS typically provides a suite of development tools, programming languages, libraries, and APIs to streamline the development process.
+3. Deployment - PaaS platforms often include automated deployment mechanisms, making it easier to push code from development to production environments.
+4. Scalability - Most PaaS offerings provide built-in scalability features, allowing applications to handle increased load without manual intervention.
+5. Managed Services - Database management, caching, and other common services are often provided and managed by the PaaS provider.
+6. Security and Compliance - PaaS providers typically handle many aspects of security and compliance, though developers still need to implement application-level security.
+7. Collaboration - Many PaaS solutions offer tools for team collaboration and version control integration.
+
+- Related services: Heroku, Google App Engine, Microsoft Azure App Service. These platforms allow
+developers to write code in various languages and frameworks, then deploy and run their applications without
+worrying about server provisioning, load balancing, or other infrastructure concerns.
+- Most suited for: startups, small to medium sized companies, microservice architectures, Mobile backend as a service (MBaaS) scenarios, IoT (Internet of Things) application backends
+- Risks: Increased costs, unexpected overages, cloud provider specific implementations, complexity with multi-cloud
+
+===== Software as a Service (SaaS)
+
+With SaaS, a provider offers an entire application stack. Users simply log in and use the application that runs
+completely on the provider's infrastructure. Typically, SaaS applications are completely accessible via the browser.
+SaaS providers manage the application workload and all underlying IT resources; users only control the data created
+by the SaaS application. Examples of SaaS include Salesforce, Dropbox and Google Workspace.
+
+=== Network effects
+
+Network effects are a critical driver of ecosystem growth and can manifest in several ways:
+
+Direct network effects: The value of a product or service increases as more users adopt it (e.g., social networks, communication tools)
+Indirect network effects: The value increases as complementary products or services become available (e.g., more apps for a platform)
+Data network effects: The service improves as it collects and analyzes more user data
+
+As developers, understanding these dynamics can inform our decisions on:
+
+* Which platforms or technologies to build for
+* How to position our products within existing ecosystems
+* Opportunities for creating new ecosystems or niches
