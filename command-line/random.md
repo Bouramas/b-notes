@@ -26,3 +26,11 @@ A list of random terminal commands which might be useful to remember.
 
     // See which process is consuming the most memory
     top -o rsize
+
+
+List of random terminal tools
+
+    // The Fuck - A really helpful command line tool for typos fixing
+    https://github.com/nvbn/thefuck
+
+
