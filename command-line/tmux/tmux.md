@@ -8,9 +8,11 @@ TMUX - Plugin Manager
 https://github.com/tmux-plugins/tpm
 
 Notes:
-  LEADER: the leader key is used to prefix tmux shortcuts - currently set to Ctrl+s (default is Ctrl+b)
+  
+LEADER: the leader key is used to prefix tmux shortcuts - currently set to Ctrl+s (default is Ctrl+b)
 
 Commands:
+
     LEADER + c - create new session
     LEADER + n - next window
     LEADER + " - vertical split pane
@@ -18,8 +20,10 @@ Commands:
     LEADER + ? - SEE ALL SHORTCUTS
 
 Install plugins
+
     LEADER + I - in order to install a plugin
 
 Shortcuts:
+    
     list sessions -> tmux ls
     kill session -> tmux kill-session -t session_name
