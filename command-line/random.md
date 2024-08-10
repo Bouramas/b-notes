@@ -32,5 +32,3 @@ List of random terminal tools
 
     // The Fuck - A really helpful command line tool for typos fixing
     https://github.com/nvbn/thefuck
-
-
