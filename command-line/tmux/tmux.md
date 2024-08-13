@@ -11,6 +11,10 @@ Sessions / Windows / Panes
 In TMUX you can have multiple sessions. Each session can have multiple windows and each window
 can have multiple panes.
 
+tmuxifier - is a tool you can use in order to predefine layouts which you can the load with a command:
+- tmuxifier load-session layout_name
+- layouts are stored in .tmuxifier/layouts
+
 Notes:
   
 LEADER: the leader key is used to prefix tmux shortcuts - currently set to Ctrl+s (default is Ctrl+b)
