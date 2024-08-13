@@ -27,6 +27,7 @@ Session Commands:
 Window Commands:
 
     LEADER + c - create new window
+    LEADER + , - rename window
     LEADER + p - previous window
     LEADER + n - next window
     LEADER + 0...9 - select window by number

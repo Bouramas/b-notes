@@ -1,13 +1,13 @@
 ## NEOVIM notes
 
-#### Installation notes (MacOS)
+Installation notes (MacOS)
 
 - Install a nerd font in order to have the icons:
   ```brew install font-hack-nerd-font```
 
 #### Usage Notes
 
-#### Lesson 1 SUMMARY
+##### Lesson 1 SUMMARY
 
  1. The cursor is moved using either the arrow keys or the hjkl keys.
      h (left)   j (down)       k (up)       l (right)
@@ -65,4 +65,3 @@
 
         c   [number]   motion
 
-Now go on to the next lesson.
