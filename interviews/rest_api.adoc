@@ -89,3 +89,7 @@ What strategies do you use for error handling in a REST API? Can you provide exa
 
 ==== Consistent Error Responses:
 Use a standard format (e.g., JSON) with fields like `errorCode`, `message`, `details`.
+
+
+To read: REST API Design Rulebook - by Mark Masse - O'Reilly
+
