@@ -20,3 +20,7 @@ https://github.com/facundoolano/software-papers
 
 ### Microservices
 https://martinfowler.com/articles/microservices.html
+
+### Professional-programming
+A list of resources with great articles on programming.
+https://github.com/charlax/professional-programming
