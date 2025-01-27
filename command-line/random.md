@@ -32,3 +32,6 @@ List of random terminal tools
 
     // The Fuck - A really helpful command line tool for typos fixing
     https://github.com/nvbn/thefuck
+
+    // LazyDocker - A terminal UI for docker
+    https://github.com/jesseduffield/lazydocker
